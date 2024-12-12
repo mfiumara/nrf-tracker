@@ -21,7 +21,7 @@ embassy-nrf = { version = "0.2.0", features = [
     "nrf9160-s",
     "time-driver-rtc1",
     "gpiote",
-    "unstable-pac",
+    # "unstable-pac",
     "time",
 ] }
 # embassy-net-nrf91 = { version = "0.0.0", features = ["defmt"] }
@@ -48,3 +48,9 @@ embedded-io-async = { version = "0.6.1", features = ["defmt-03"] }
 
 [profile.release]
 debug = 2
+
+[patch.crates-io]
+embassy-executor = { git = "https://github.com/embassy-rs/embassy", rev = "02ba6cd6c81ac1174287bbad1efd4fd68ad13aa3" }
+embassy-sync = { git = "https://github.com/embassy-rs/embassy", rev = "02ba6cd6c81ac1174287bbad1efd4fd68ad13aa3" }
+embassy-time = { git = "https://github.com/embassy-rs/embassy", rev = "02ba6cd6c81ac1174287bbad1efd4fd68ad13aa3" }
+embassy-nrf = { git = "https://github.com/embassy-rs/embassy", rev = "02ba6cd6c81ac1174287bbad1efd4fd68ad13aa3" }
