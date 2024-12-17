@@ -18,7 +18,8 @@ embassy-time = { version = "0.3.2", features = [
 ] }
 embassy-nrf = { version = "0.2.0", features = [
     "defmt",
-    "nrf9160-s",
+    # "nrf9160-s",
+    "nrf52840",
     "time-driver-rtc1",
     "gpiote",
     # "unstable-pac",
@@ -45,6 +46,8 @@ panic-probe = { version = "0.3", features = ["print-defmt"] }
 static_cell = { version = "2" }
 embedded-io = "0.6.1"
 embedded-io-async = { version = "0.6.1", features = ["defmt-03"] }
+
+adp5360 = { version = "0.2" }
 
 [profile.release]
 debug = 2
